@@ -38,7 +38,7 @@ function CSSugar(cssjson, selectorEngine){
         var elements = selectorEngine(selector, options.selectorContext||document);
         var properties = cssjson[selector]
         for(var i=0; i<elements.length; i++){
-            var element = elements[0];
+            var element = elements[i];
             for(var property in properties){
                 element.style[property] = properties[property];
             }
