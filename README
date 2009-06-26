@@ -20,7 +20,7 @@ NOTES:
  *
  * @param {Object} cssjson An object literal representation of CSS folllowing CSS JSON convention.
  * @param {Function} selectorEngine A function to be used to handle the selector matching. The function gets passed 
- *                                  one argument: The selector in String format. The function should return an Array
- *                                  of matching DOM element references. If not matches are found, an empty Array is
- *                                  expected.
+ * one argument: The selector in String format. The function should return an Array of matching DOM element references. 
+ * If no matches are found, an empty Array is expected.
+ * @param {Object} (Optional) options An object literal representation of options. Current options TBD.
  */
