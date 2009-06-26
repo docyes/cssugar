@@ -1,0 +1,16 @@
+NOTES:
+-Follow CSS JSON convention http://featureblend.com/css-json.html
+[
+    {
+        "selector-1": {
+            "property-1" : "value-1",
+            "property-n" : "value-n"
+	}
+    },
+    {
+        "selector-n": {
+            "property-1" : "value-1",
+            "property-n" : "value-n"
+        } 
+    }
+]
