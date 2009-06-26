@@ -16,7 +16,7 @@
  *            "property-n" : "value-n"
  *        } 
  *    }
- *]
+ * ]
  * @param {Function} selectorEngine A function to be used to handle the selector matching. The function gets passed
  * one argument: The selector in String format. The function should return an Array of matching DOM element references.
  * If no matches are found, an empty Array is expected.
