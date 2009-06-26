@@ -18,7 +18,12 @@
  *    }
  * ]
  * @param {Function} selectorEngine A function to be used to handle the selector matching. The function gets passed
- * one argument: The selector in String format. The function should return an Array of matching DOM element references.
+ * two arguments: 
+ * {String} selector The selector.
+ * {DOMElement} context A DOM element to constrain the selector context, defaults to document if not defined in options selectorContext. 
+ * The function should return an Array of matching DOM element references.
  * If no matches are found, an empty Array is expected.
- * @param {Object} (Optional) options An object literal representation of options. Current options TBD.
+ * @param {Object} (Optional) options An object literal representation of options. 
+ * Options:
+ * {DOMElement} selectorContext A DOM element to constrain the selector context.
  */
