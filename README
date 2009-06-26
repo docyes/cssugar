@@ -1,24 +1,22 @@
-NOTES:
--Follow CSS JSON convention http://featureblend.com/css-json.html
-[
-    {
-        "selector-1": {
-            "property-1" : "value-1",
-            "property-n" : "value-n"
-        }
-    },
-    {
-        "selector-n": {
-            "property-1" : "value-1",
-            "property-n" : "value-n"
-        } 
-    }
-]
-
 /**
  * Base constructor.
  *
- * @param {Object} cssjson An object literal representation of CSS folllowing CSS JSON convention.
+ * @param {Object} cssjson An object literal representation of CSS folllowing CSS JSON convention (http://featureblend.com/css-json.html).
+ * Example:
+ * [
+ *    {
+ *        "selector-1": {
+ *            "property-1" : "value-1",
+ *            "property-n" : "value-n"
+ *        }
+ *    },
+ *    {
+ *        "selector-n": {
+ *            "property-1" : "value-1",
+ *            "property-n" : "value-n"
+ *        } 
+ *    }
+ *]
  * @param {Function} selectorEngine A function to be used to handle the selector matching. The function gets passed 
  * one argument: The selector in String format. The function should return an Array of matching DOM element references. 
  * If no matches are found, an empty Array is expected.
