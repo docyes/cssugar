@@ -53,8 +53,8 @@ function CSSugar(cssjson, selectorEngine){
                             var processorArguments = {
                                 "property": property,
                                 "value": properties[property],
-                                 "selector": selector,
-                                 "cssjson": cssjson
+                                "selector": selector,
+                                "cssjson": cssjson
                             };
                             var processedProperties = options.processor(processorArguments);
                             for(var processedProperty in processedProperties){
