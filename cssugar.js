@@ -43,7 +43,7 @@ function CSSugar(cssjson, selectorEngine){
     var options = arguments[2] || {};
     for(var selector in cssjson){
         if(cssjson.hasOwnProperty(selector)){
-            var elements = selectorEngine(selector, options.selectorContext||document);
+            var elements = selectorEngine(selector, options.selectorContext || document);
             var properties = cssjson[selector]
             for(var i=0; i<elements.length; i++){
                 var element = elements[i];
