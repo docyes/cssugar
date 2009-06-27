@@ -1,5 +1,5 @@
 /**
- * Constructor.
+ * CSSugar Constructor.
  *
  * @param {Object} cssjson An object literal representation of CSS folllowing CSS JSON convention (http://featureblend.com/css-json.html).
  *        
@@ -8,15 +8,13 @@
  *            "selector-1": {
  *                "property-1" : "value-1",
  *                "property-n" : "value-n"
- *            }
- *        },
- *        {
+ *            },
  *            "selector-n": {
  *                "property-1" : "value-1",
  *                "property-n" : "value-n"
  *            }
  *        }
- *        
+ *
  * @param {Function} selectorEngine
  *        A function to be used to handle the selector matching.
  *        The function gets passed two arguments: 
