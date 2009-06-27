@@ -38,36 +38,36 @@
  *        {Object} cssjson The invoked cssjson object. See constructor argument cssjson documentation.
  *        The function should return an object literal of property/values for replacement.
  *        To remove the property/value completely return and an empty object literal (eg., {})
- */    
+ */
 function CSSugar(cssjson, selectorEngine){
     var options = arguments[2] || {};
     for(var selector in cssjson){
-    	if(cssjson.hasOwnProperty(selector)){
-	        var elements = selectorEngine(selector, options.selectorContext||document);
-	        var properties = cssjson[selector]
-	        for(var i=0; i<elements.length; i++){
-	            var element = elements[i];
-	            for(var property in properties){
-	            	if(properties.hasOwnProperty(property)){
-	            		if(options.processor){
-	            			var processorArguments = {
-	            				"property": property,
-	            				"value": properties[property],
-	            				"selector": selector,
-	            				"cssjson": cssjson
-	            			};
-	            			var processedProperties = options.processor(processorArguments);
-	            			for(var processedProperty in processedProperties){
-	            				if(processedProperties.hasOwnProperty(processedProperty)){
-	            					element.style[processedProperty] = processedProperties[processedProperty];
-	            				}
-	            			}
-	            		}else{
-	            			element.style[property] = properties[property];
-	            		}
-	            	}
-	            }
-	        }
-    	}
+        if(cssjson.hasOwnProperty(selector)){
+            var elements = selectorEngine(selector, options.selectorContext||document);
+            var properties = cssjson[selector]
+            for(var i=0; i<elements.length; i++){
+                var element = elements[i];
+                for(var property in properties){
+                    if(properties.hasOwnProperty(property)){
+                        if(options.processor){
+                            var processorArguments = {
+                                "property": property,
+                                "value": properties[property],
+                                 "selector": selector,
+                                 "cssjson": cssjson
+                            };
+                            var processedProperties = options.processor(processorArguments);
+                            for(var processedProperty in processedProperties){
+                                if(processedProperties.hasOwnProperty(processedProperty)){
+                                    element.style[processedProperty] = processedProperties[processedProperty];
+                                }
+                            }
+                        }else{
+                            element.style[property] = properties[property];
+                        }
+                    }
+                }
+            }
+        }
     }
 }
