@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en-US" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="rating" content="General" />
+	<meta name="author" content="Doc Yes" />
+	<meta name="robots" content="index,follow" />
+	<meta name="revisit-after" content="10 days" />
+	<meta name="description" content="CSSugar Example" />
+	<meta name="keywords" content="CSSugar example" />
+	<title>CSSugar Example</title>
+</head>
+<body>
+
+<div>
+  <h1>CSSugar Example</h1>
+</div>
+<div>
+  <p>Sample paragraph 1</p>
+  <p>Sample paragraph 2</p>
+  <p>Sample paragraph 3</p>
+</div>
+<div>
+  <em>Flush twice it's a long way to the bay!</em>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="cssugar.js"></script>
+<script type="text/javascript">
+CSSugar(
+  {
+    "div:first" : {
+      "background": "red"
+    },
+    "div:eq(1) p:first" : {
+      "fontFamily": "Verdana",
+      "fontSize": "12px",
+      "color": "green"
+    },
+    "div:eq(1) p:eq(1)" : {
+        "fontFamily": "Verdana",
+        "fontSize": "14px",
+        "fontWeight": "bold",
+        "color": "yellow"
+    },
+    "div:eq(1) p:last" : {
+        "fontFamily": "Arial",
+        "fontSize": "24px",
+        "fontWeight": "bold",
+        "color": "brown"
+    },
+    "div:last" : {
+      "background": "pink",
+      "fontSize": "10px"
+    }
+  },
+  $
+);
+</script>
+</body>
+</html>
