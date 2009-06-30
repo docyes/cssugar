@@ -3,4 +3,12 @@ Syntactic sugar for CSS
 
 Make things easier to read and express in CSS.
 
+A JavaScript CSS applicator designed to work with a JavaScript selector engine of choice.
+
+Web Site:
+http://cssugar.com
+
+Discussion:
+http://groups.google.com/group/cssugar
+
 "Flush twice it's a long way to the bay!"
