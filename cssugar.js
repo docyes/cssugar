@@ -61,7 +61,7 @@ function CSSugar(cssjson, selectorEngine){
                                 }
                             }
                         }else{
-                            element.style[property] = properties[property];
+                            element.style[((property=="float")?"cssFloat":property)] = properties[property];
                         }
                     }
                 }
